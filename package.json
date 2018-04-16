@@ -1,0 +1,28 @@
+{
+  "name": "hangman-cli",
+  "version": "1.0.0",
+  "description": "A CLI Hangman game that uses the inquirer node package.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cezarcarvalhaes/Hangman-CLI.git"
+  },
+  "keywords": [
+    "CLI",
+    "inquirer",
+    "npm",
+    "hangman"
+  ],
+  "author": "Cezar Carvalhaes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cezarcarvalhaes/Hangman-CLI/issues"
+  },
+  "homepage": "https://github.com/cezarcarvalhaes/Hangman-CLI#readme",
+  "dependencies": {
+    "inquirer": "^5.2.0"
+  }
+}
