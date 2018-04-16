@@ -2,22 +2,23 @@ var Letter = function (correctLetter) {
     this.correctLetter = correctLetter;
     this.correctGuess = false;
     this.displayLetter = function() {
-        // console.log("display letter:");
+        //returns correctly guessed letters
         if (this.correctGuess === true) {
-            // console.log(correctLetter)
             return correctLetter;
         }
+        //This will handle any spaces
+        else if (correctLetter === ' ') {
+            return ' '
+        }
+        //returns '_' for hidden letters
         else {
-            // console.log('_')
             return '_'
         }
     }
     this.checkLetter = function (character) {
-        //console.log("check letter:");
         if (character.toLowerCase() === correctLetter.toLowerCase()){ 
             this.correctGuess = true;
             return true;
-            //console.log(this.correctGuess)
         }
     }
 

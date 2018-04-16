@@ -1,22 +1,29 @@
 var Letter = require('./Letter.js')
 
 var Word = function (input) {
+    //saves string to check later
     this.rightWord = input;
+    //empty array to be filled with Letter objects
     this.wordLetters = [];
+    //this function will push new Letter objects into our wordLetters array
     this.getLetters = function() {
         for (i = 0; i < input.length; i++) {
             this.wordLetters.push(new Letter(input.charAt(i)))
         }
     }
+    //Function for displaying correctly guessed and still hidden letters
     this.displayWord = function() {
         var word = [];
         for (i = 0; i < this.wordLetters.length; i++) {
             word.push(this.wordLetters[i].displayLetter())
         }
+        //holds word with spaces in between for easier readability
         var displayed = 'word: ' + word.join(' ');
+        //holds the word without spaces inbetween for checking accuracy later
         this.guessedWord = word.join('');
         console.log(displayed);
     }
+    //This function checks letter guesses
     this.letterGuess = function (character) {
         var correct = false;
         for (i = 0; i < this.wordLetters.length; i++) {
@@ -41,10 +48,3 @@ var Word = function (input) {
 
 module.exports = Word;
 
-// var checkWord = new Word ('foobar');
-// checkWord.getLetters();
-// checkWord.displayWord();
-// checkWord.letterGuess('o');
-// checkWord.displayWord();
-// checkWord.letterGuess('b');
-// checkWord.displayWord();
