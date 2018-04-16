@@ -10,6 +10,10 @@ var Letter = function (correctLetter) {
         else if (correctLetter === ' ') {
             return ' '
         }
+        //This will handle any dashes
+        else if (correctLetter === '-') {
+            return '-'
+        }
         //returns '_' for hidden letters
         else {
             return '_'

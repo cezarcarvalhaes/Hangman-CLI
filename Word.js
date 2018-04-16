@@ -21,7 +21,7 @@ var Word = function (input) {
         var displayed = 'word: ' + word.join(' ');
         //holds the word without spaces inbetween for checking accuracy later
         this.guessedWord = word.join('');
-        console.log(displayed);
+        console.log("\n"+ displayed + "\n");
     }
     //This function checks letter guesses
     this.letterGuess = function (character) {
@@ -33,17 +33,17 @@ var Word = function (input) {
             }
         }
         if (correct) {
-            console.log("Correct!")
+            console.log("\nCorrect!\n")
         }
         else {
             this.guessesRemaining--;
-            console.log ("Incorrect!")
-            console.log ("You have "+ this.guessesRemaining+ " guesses remaining.")
+            console.log ("\nIncorrect!")
+            console.log ("You have "+ this.guessesRemaining+ " guesses remaining.\n")
         }
         this.displayWord();
     }
     this.guessedWord;
-    this.guessesRemaining = 10;
+    this.guessesRemaining = 7;
 }
 
 module.exports = Word;

@@ -66,7 +66,6 @@ function guessALetter(word) {
         word.letterGuess(letter)
         if (word.rightWord === word.guessedWord){
             console.log("Nice Job! You got the word!")
-            console.log(wordsArr);
             playAgain();
         }
         else if (word.guessesRemaining === 0){
