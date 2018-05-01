@@ -24,21 +24,7 @@ var wordsArr = ['Afghanistan','Albania','Algeria', 'Andorra', 'Anguilla', 'Antig
 console.log("\n\n---------------------------Welcome to Nations of the World Hangman!---------------------------\n\n")
 
 //Starts our game up
-inquirer.prompt([
-    {
-        name: 'play',
-        type: 'confirm',
-        message: 'Would you like to start playing?'
-    }
-]).then(function(answer){
-    if (answer.play === true) {
-        newWord();
-    }
-    else {
-        console.log("Bummer, maybe next time.")
-    }
-}
-);
+newWord();
 
 //Function randomly selects a word from our array and creates a new Word object
 function newWord() {
