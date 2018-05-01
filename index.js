@@ -42,15 +42,14 @@ inquirer.prompt([
 
 //Function randomly selects a word from our array and creates a new Word object
 function newWord() {
-    var rdm = Math.floor(Math.random() * wordsArr.length);
-    var tempWord = wordsArr[rdm];
-    var hangmanWord = new Word (tempWord);
+    var wordIndex = Math.floor(Math.random() * wordsArr.length);
+    var hangmanWord = new Word (wordsArr[wordIndex]);
     console.log ("Here's your new word:")
     hangmanWord.getLetters();
     hangmanWord.displayWord();
     guessALetter(hangmanWord);
     //Deletes the current word from our array
-    wordsArr.splice(rdm,1);
+    wordsArr.splice(wordIndex,1);
 }
 
 //Function for guessing letters

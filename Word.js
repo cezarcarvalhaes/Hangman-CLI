@@ -27,7 +27,6 @@ var Word = function (input) {
     this.letterGuess = function (character) {
         var correct = false;
         for (i = 0; i < this.wordLetters.length; i++) {
-            this.wordLetters[i].checkLetter(character);
             if (this.wordLetters[i].checkLetter(character)) {
                 correct = true;
             }
@@ -42,7 +41,6 @@ var Word = function (input) {
         }
         this.displayWord();
     }
-    this.guessedWord;
     this.guessesRemaining = 7;
 }
 
